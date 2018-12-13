@@ -10,26 +10,14 @@
 
         <style>
       		div {
-      			width:100px;
-      			height:100px;
+      			width:100%;
+      			height:100%;
       		}
       		div.box1 {
       			position:relative;
       			z-index:1;
       		}
-      		div.box2 {
-      			position:relative;
-      			top:-80px;
-      			left:50px;
-      			z-index:2;
-      		}
-          div.box3 {
-      			position:relative;
-      			top:-160px;
-      			left:100px;
-      			z-index:3;
 
-      		}
                 @keyframes bgcolor {
           0% {
               background-color: #45a3e5
@@ -64,9 +52,9 @@ body {
         <script src="js/jquery.js"></script>
     </head>
     <body>
-      <div class="box1">    <marquee><img src="images/1.jpg"></marquee> </div>
-    	<div class="box2">    <marquee><img src="images/2.jpg"></marquee> </div>
-    	<div class="box3">    <marquee><img src="images/3.jpg"></marquee> </div>
+      <div class="box1">    <marquee loop="infinite" behavior="scroll" direction="right" scrollamount="15"><img src="images/1.png"><img src="images/1.png"><img src="images/1.png"></marquee> </div>
+
+
         <!-- Javascript -->
         <script src="js/main.js"></script>
 
