@@ -1,0 +1,64 @@
+<html>
+<head>
+<title>A More Complex Form with JavaScript Validation</title>
+<script type="text/javascript">
+<!--
+function validate_form ( )
+{
+	valid = true;
+        if ( document.contact_form.contact_name.value == "" )
+        {
+                alert ( "Please fill in the 'Your Name' box." );
+                valid = false;
+        }
+        if ( ( document.contact_form.gender[0].checked == false ) && ( document.contact_form.gender[1].checked == false ) )
+        {
+                alert ( "Please choose your Gender: Male or Female" );
+                valid = false;
+        }
+        if ( document.contact_form.age.selectedIndex == 0 )
+        {
+                alert ( "Please select your Age." );
+                valid = false;
+        }
+        if ( document.contact_form.terms.checked == false )
+        {
+                alert ( "Please check the Terms & Conditions box." );
+                valid = false;
+        }
+        return valid;
+}
+//-->
+</script>
+</head>
+<body bgcolor="#FFFFFF">
+<form name="contact_form" method="post" action="/cgi-bin/articles/development/javascript/form-validation-with-javascript/contact_complex.cgi" onSubmit="return validate_form ( );">
+
+<h1>Please Enter Your Details Below</h1>
+
+<p>Your Name: <input type="text" name="contact_name"></p>
+
+<p>Your Gender: <input type="radio" name="gender" value="Male"> Male
+&nbsp; <input type="radio" name="gender" value="Female"> Female</p>
+
+<p>Your Age:
+
+<select name="age">
+<option value="">Please Select an Option:</option>
+<option value="0-18 years">0-18 years</option>
+<option value="18-30 years">18+</option>
+</select>
+
+
+
+<p>Do you agree to the Terms and Conditions?
+<input type="checkbox" name="terms" value="Yes"> Yes
+
+<p><input type="submit" name="send" value="Send Details"></p>
+
+</form>
+
+</body>
+
+</html>
+
