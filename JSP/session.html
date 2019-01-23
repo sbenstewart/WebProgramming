@@ -1,0 +1,27 @@
+<%@page import = "java.util.*" session="true"%>
+<HTML>
+    <HEAD>
+        <TITLE>Using Sessions to Track Users</TITLE>
+    </HEAD>
+
+    <BODY>
+        <%
+        Integer counter = (Integer)session.getAttribute("counter");
+        if (counter == null) {
+            counter = new Integer(1);
+        } else {
+            counter = new Integer(counter.intValue() + 1);
+        }
+
+        session.setAttribute("counter", counter);
+        %>
+        <H1>Using Sessions to Track Users</H1>
+        Session ID: <%=session.getId()%>
+        <BR>
+        Session creation time: <%=new Date(session.getCreationTime())%>
+        <BR>
+        Last accessed time: <%=new Date(session.getLastAccessedTime())%>
+        <BR>
+        Number of times you've been here: <%=counter%>
+    </BODY>
+</HTML>
