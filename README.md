@@ -1,5 +1,5 @@
 # WebProgramming
-Straight for the class.
+Straight for the class. And it's over for now.
 ## Why this?
 Ma'am gives code to be writted upfront in the class, which obviously I couldn't. Got used to the tab key auto predict feature for web development. I'm trying my best to change the way I code.
 ## Spoilers
